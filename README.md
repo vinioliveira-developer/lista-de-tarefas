@@ -71,10 +71,7 @@ Também faz parte da construção do meu **portfólio como desenvolvedor Front-E
 
 ## 📸 Preview
 
-
-```
 ![Preview do Portfolio](assets/img/preview.png)
-```
 
 ---
 
