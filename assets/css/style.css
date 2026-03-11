@@ -1,0 +1,158 @@
+@charset "UTF-8";
+ /*Reset global*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variável para organização de fontes e cores*/
+:root {
+    --font-principal: "Roboto", sans-serif;
+    --font-secundaria: "Arial", sans-serif;
+    --cor-de-fundo: #F3F4F6;
+    --cor-card: #FFFFFF;
+    --cor-titulo: #111827;
+    --cor-paragrafo: #3B82F6;
+    --cor-botão-bg: #4a4c4d;
+    --cor-botão-bg-hover: #4c8cf1;
+    --sombra: rgba(0, 0, 0, 0.1);
+
+}
+
+
+body {
+    font-family: var(--font-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background:var(--cor-de-fundo); 
+}
+
+/*Caixa do card, inserido o conteúdo da lista de tarefas.*/
+.container {
+    display: grid; 
+    grid-template-rows: auto auto auto;
+    place-items: center;
+    gap: 12px;   
+    padding: 20px;
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    max-width: 600px;
+
+}
+
+h1 {
+    color: var(--cor-titulo);
+    margin-top: 20px;
+}
+
+p {
+    color: var(--cor-paragrafo);
+    font-size: 1.1em;
+}
+
+button {
+    background-color: var(--cor-botão-bg);
+    color: #F4F0EA;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--sombra);
+    color: var(--cor-botão-bg-hover);
+    
+}
+
+/*Estilo para lista inserida com js*/
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    font-family: var(--font-principal);
+}
+
+ul li {
+    
+    background-color: #F4F0EA;
+    color: #331F19;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--sombra);
+    
+}
+
+/* Estilo para o campo de entrada */
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--sombra);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--Font-secundaria);
+    box-shadow: inset 0 2px 4px var(--sombra);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus {
+    border-color: rgb(93, 94, 95);
+    box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
+}
+
+/* Botões de ação */
+
+.botao-remover {
+    background-color: #A34743;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+.botao-remover:hover {
+    background-color: #60041A;
+}
+.botao-editar {
+    background-color: #331F19;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+.botao-editar:hover {
+    background-color: #744d41;
+}
+
+.botao_lista {
+    background-color: #A34743;
+}
+
+.botao_lista:hover {
+    background-color: #60041A;
+    color: #F4F0EA;
+}
